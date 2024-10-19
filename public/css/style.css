@@ -1,0 +1,395 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+}
+
+/* Header styling */
+header {
+  background: #f5e5d9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+  padding: 10px 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  max-width: 1500px;
+  margin: 10px;
+  padding: 0 20px;
+}
+
+.head-logo {
+  margin-right: auto; /* Allow the logo to push content to the right */
+  margin-left: 0%;
+}
+
+.head-logo img {
+  max-width: 100%; /* Ensure the logo doesn't exceed its container */
+  height: auto; /* Maintain aspect ratio */
+  width: 75px; /* Set a specific width, adjust as necessary */
+}
+
+.logo {
+  text-align: left; /* Center align the logo and tagline */
+  flex-grow: 1; /* Allow this section to grow */
+  padding-left: 1.5rem;
+  color: #271812;
+}
+
+.logo h1 {
+  font-size: 3rem;
+  font-family: serif;
+  font-weight: bolder;
+  color: inherit; /* Use inherited color */
+}
+
+.tagline {
+  font-size: 16px; /* Adjust size of the tagline */
+  color: #2f2f2f; /* Gray color for tagline */
+  margin: 5px 0 0; /* Space above the tagline */
+  font-style: italic;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav {
+  font-size: 41px;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: inherit; /* Use inherited color */
+  font-weight: bold;
+  color: #271812;
+  font-size: 1.3rem;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ebb589;
+}
+
+.auth {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+#signin-btn {
+  background-color: #724b3b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  /* font-weight: bold; */
+  font-size: 1.6rem;
+  transition: background-color 0.3s;
+}
+
+#signin-btn:hover {
+  background-color: #ebb589;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.shape.circle:nth-of-type(6) {
+  background-color: #0af;
+  width: 80px;
+  height: 80px;
+  top: 40%; /* Move to a different vertical position */
+  left: 25%; /* Adjust horizontal position */
+  animation-delay: 5s;
+}
+
+/* Hero Section Styling */
+.hero {
+  position: relative;
+  background-color: #f5e5d9; /* Light Beige/Cream */
+  height: 70vh; /* Set height to 70% of the viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #271812; /* Dark Brown for text */
+  text-align: center;
+  height: 585px;
+  padding: 20px; /* Add some padding for spacing */
+}
+
+.hero h1 {
+  font-size: 3rem; /* Adjust the font size for hero title */
+  font-family: serif; /* Use serif font for a cozy feel */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add text shadow for readability */
+}
+
+.hero p {
+  font-size: 1.5rem; /* Increase size for a prominent tagline */
+  margin-top: 10px; /* Space above the paragraph */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Add shadow for better visibility */
+}
+
+/* Animated Shapes */
+.animated-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1; /* Place shapes below content */
+}
+
+.shape {
+  position: absolute;
+  border-radius: 15px;
+  opacity: 0.8;
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Shapes */
+.circle {
+  background-color: #f07f20;
+  width: 100px;
+  height: 100px;
+  bottom: 3%;
+  animation-delay: 0s;
+}
+
+.rectangle {
+  background-color: #fff200;
+  width: 150px;
+  height: 80px;
+  left: 70%;
+  bottom: 7%;
+  animation-delay: 1s;
+}
+
+.book {
+  background-color: #0085ff;
+  width: 70px;
+  height: 90px;
+  top: 70%;
+  left: 7%;
+  animation-delay: 2s;
+}
+
+/*    .circle {
+    background-color: #f07f20;
+    width: 100px;
+    height: 100px;
+    position: absolute; 
+    animation-delay: 0s;
+    top: 10%; 
+    left: 15%;
+}
+
+.rectangle {
+    background-color: #fff200;
+    width: 150px;
+    height: 80px;
+    position: absolute;
+    animation-delay: 1s;
+    top: 40%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+}
+
+.book {
+    background-color: #0085ff;
+    width: 70px;
+    height: 90px;
+    position: absolute;
+    animation-delay: 2s;
+    bottom: 15%; 
+    right: 20%; 
+}
+    */
+
+/* Spread Shapes */
+.shape.circle:nth-of-type(4) {
+  background-color: #ff5e20;
+  width: 90px;
+  height: 90px;
+  top: 20%; /* Adjust vertical position */
+  left: 10%; /* Adjust horizontal position */
+  animation-delay: 3s;
+}
+
+.shape.rectangle:nth-of-type(5) {
+  background-color: #ffcc00;
+  width: 120px;
+  height: 60px;
+  top: 50%; /* Adjust vertical position */
+  left: 75%; /* Adjust horizontal position */
+  animation-delay: 4s;
+}
+
+.shape.circle:nth-of-type(6) {
+  background-color: #0af;
+  width: 80px;
+  height: 80px;
+  top: 40%; /* Move to a different vertical position */
+  left: 25%; /* Adjust horizontal position */
+  animation-delay: 5s;
+}
+
+/* Move Shapes to Lower Right Corner */
+.shape.circle:nth-of-type(7) {
+  background-color: #20f07f;
+  width: 70px;
+  height: 70px;
+  bottom: 15%; /* Position from the bottom */
+  right: 5%; /* Move to the right corner */
+  animation-delay: 2.5s;
+}
+
+.shape.rectangle:nth-of-type(8) {
+  background-color: #ff4081;
+  width: 130px;
+  height: 70px;
+  bottom: 20%; /* Position from the bottom */
+  right: 20%; /* Move to the right corner */
+  animation-delay: 3.5s;
+}
+
+.shape.circle:nth-of-type(9) {
+  background-color: #ff5733;
+  width: 80px;
+  height: 80px;
+  top: 10%; /* Adjust vertical position */
+  left: 45%; /* Adjust horizontal position */
+  animation-delay: 4.5s;
+}
+
+.shape.rectangle:nth-of-type(10) {
+  background-color: #6610f2; /* New color for rectangle */
+  width: 120px;
+  height: 60px;
+  bottom: 30%; /* Position from the bottom */
+  right: 10%; /* Adjust horizontal position */
+  animation-delay: 3s;
+}
+
+.shape.triangle:nth-of-type(11) {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent; /* Triangle left */
+  border-right: 50px solid transparent; /* Triangle right */
+  border-bottom: 80px solid #ffc107; /* Triangle color */
+  top: 70%; /* Position from the top */
+  left: 30%; /* New horizontal position */
+  animation-delay: 3s;
+}
+
+.shape.circle:nth-of-type(12) {
+  background-color: #17a2b8; /* New color for circle */
+  width: 70px;
+  height: 70px;
+  bottom: 10%; /* Position from the bottom */
+  left: 25%; /* Adjust horizontal position */
+  animation-delay: 0.5s;
+}
+
+.shape.rectangle:nth-of-type(13) {
+  background-color: #28a745; /* New color for rectangle */
+  width: 100px;
+  height: 50px;
+  top: 5%; /* Adjust vertical position */
+  right: 40%; /* Adjust horizontal position */
+  animation-delay: 2s;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Hero Content */
+.hero-content {
+  position: relative;
+  z-index: 2; /* Ensure text is above animated shapes */
+  padding: 20px;
+  background: rgba(244, 234, 234, 0); /* Semi-transparent background */
+  border-radius: 10px;
+}
+
+.hero-content h2 {
+  font-size: 7rem;
+  margin-bottom: 10px;
+  font-family: serif;
+}
+.hero-content div {
+  size: 3rem;
+}
+
+.get-started {
+  background-color: #724b3b; /* Maroon color */
+  color: white;
+  border: none;
+  padding: 20px 30px;
+  padding-top: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 27px;
+  /* font-weight: bold; */
+  position: relative; /* Position relative for the arrow */
+  transition: background-color 0.3s;
+}
+
+.get-started:hover {
+  background-color: #ebb589; /* Light color on hover */
+}
+
+.arrow {
+  margin-left: 10px; /* Space between text and arrow */
+  font-size: 3rem; /* Adjust size of the arrow */
+  font-weight: bold;
+  transition: transform 0.3s; /* Smooth transition */
+}
+
+/* Optional: Add a hover effect to the arrow */
+.get-started:hover .arrow {
+  transform: translateX(5px); /* Move arrow slightly on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-content h2 {
+    font-size: 2.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .get-started {
+    font-size: 16px; /* Adjust size of button */
+  }
+
+  .shape {
+    width: 60px; /* Adjust shape size for mobile */
+    height: 60px; /* Adjust shape size for mobile */
+  }
+}
