@@ -32,13 +32,15 @@ app.get("/login", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "html", "login.html"));
 });
 
+app.get("/MainPage", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "html", "MainPage.html"));
+});
 // Registration route
 app.post("/register", async (req, res) => {
   const { email, password } = req.body;
 
   try {
     const client = await MongoClient.connect(uri);
-
     const database = client.db("BookStoreDB");
     const usersCollection = database.collection("users");
 
@@ -52,7 +54,9 @@ app.post("/register", async (req, res) => {
     await usersCollection.insertOne({ email: email, password: password });
     console.log("User registered:", email);
 
-    // res.status(201).json({ message: "User registered successfully!" });
+    // Send success response
+    res.status(201).json({ message: "User registered successfully!" });
+
     client.close();
   } catch (error) {
     console.error("Error connecting to MongoDB:", error);

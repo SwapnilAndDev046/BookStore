@@ -1,0 +1,167 @@
+/* General body styling */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styling */
+header {
+  background-color: #1995ad;
+  color: rgb(0, 0, 0);
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation styling */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left a,
+.nav-right a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+.nav-left a:hover,
+.nav-right a:hover {
+  text-decoration: underline;
+}
+
+.nav-center {
+  flex-grow: 1; /* To center the project title */
+}
+
+/* Search section styling */
+.search-section {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#pdfSearch {
+  width: 50%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Main section styling */
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 20px auto 0;
+  background-color: #1995ad;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Department list styling */
+h2 {
+  text-align: center; /* Centering "Select Department" */
+  margin: 20px 0; /* Space around heading */
+}
+
+.department-list {
+  display: flex;
+  justify-content: center; /* Centering department cards */
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  gap: 20px;
+}
+
+.department-card {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  width: 30%; /* Adjust the width for 3 cards in a row */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.department-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Department image styling */
+img.department-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Footer styling */
+footer {
+  background-color: #1995ad;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 40px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Login form styling */
+.login-form {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.close-button {
+  background-color: #1995ad;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .department-card {
+    width: 45%; /* 2 cards in a row on smaller screens */
+  }
+
+  #pdfSearch {
+    width: 80%; /* Wider search bar on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .department-card {
+    width: 90%; /* 1 card in a row on very small screens */
+  }
+
+  #pdfSearch {
+    width: 90%; /* Wider search bar on very small screens */
+  }
+}

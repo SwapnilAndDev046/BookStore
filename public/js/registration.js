@@ -40,9 +40,11 @@ document
       if (response.ok) {
         const data = await response.json();
         alert(data.message); // Display success message
-        // Optionally, redirect to another page or clear the form
+        // Open MainPage in a new window
+        window.open("/MainPage", "_blank");
       } else {
-        alert("Registration failed!");
+        const errorData = await response.json();
+        alert(errorData.message); // Display error message from server
       }
     } catch (error) {
       console.error("Error:", error);
