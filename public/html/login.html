@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookStore Login</title>
+  <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <h1>Login to BookStore</h1>
+      <form id="login-form">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label class="password-pad" for="password">Password</label>
+        <div class="password-container">
+          <input type="password" id="password" placeholder="Enter your password" required>
+          <span class="toggle-password" onclick="togglePassword('password')">&#128065;</span>
+        </div>
+
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="../js/login.js"></script>
+</body>
+
+</html>
